@@ -1,14 +1,21 @@
-<table class="table table-dark table-striped bg-dark">
-    <thead>
+<table class="table caption-top">
+  <caption>Customer List</caption>
+  <thead>
       <tr>
-        <th scope="col">Kullanıcı ID</th>
-        <th scope="col">Firma</th>
+          <th>Müşteri ID</th>
+          <th>Müşteri Adı</th>
+          <th>Müşteri Soyadı</th>
+          <th>Email</th>
+          <th>Şirket Adı</th>
       </tr>
-    </thead>
-    <tbody>
+  </thead>
+  <tbody>
       <tr *ngFor="let customer of customers">
-        <td>{{customer.userId}}</td>
-        <td>{{customer.companyName}}</td>
-      </tr>    
-    </tbody>
+          <td>{{customer.customerId}}</td>
+          <td>{{customer.firstName}}</td>
+          <td>{{customer.lastName}}</td>
+          <td>{{customer.email}}</td>
+          <td>{{customer.companyName}}</td>
+      </tr>
+  </tbody>
 </table>

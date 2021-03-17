@@ -1,22 +1,25 @@
-<table class="table table-dark table-striped bg-dark">
-    <thead>
+<table class="table caption-top">
+  <caption>Araç Listesi</caption>
+   <thead>
       <tr>
         <th scope="col">Araç No</th>
         <th scope="col">Marka</th>
         <th scope="col">Model</th>
+        <th scope="col">Model Yılı</th>
         <th scope="col">Renk</th>
         <th scope="col">Fiyat</th>
-        <th scope="col">Açıklama</th>
       </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let car of carsDto">
+  
+   </thead>
+   <tbody>
+       <tr routerLink="cars/carDetails/{{car.carId}}" *ngFor="let car of cars">
         <td>{{car.carId}}</td>
         <td>{{car.brandName}}</td>    
-        <td>{{car.carName}}</td>  
+        <td>{{car.carName}}</td>
+        <td>{{car.modelYear}}</td>
         <td>{{car.colorName}}</td>    
-        <td>{{car.dailyPrice}}₺</td>    
-        <td>{{car.description}}</td>    
-      </tr>    
-    </tbody>
+        <td>{{car.dailyPrice}}₺</td>  
+       </tr>
+   </tbody>
+   
 </table>
